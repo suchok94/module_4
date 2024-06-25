@@ -2,59 +2,62 @@
 from decimal import Decimal
 import math
 
-# # task 1
-# 
-# def input_coefficient(coefficient: str):
-#     while True:
-#         number = input(f'Введите число {coefficient}: ')
-#         try:
-#             number = float(number)
-#             return number
-#         except ValueError:
-#             print('Не правильный тип данных')
-# 
-# 
-# def calculate_discriminant(a: float, b: float, c: float):
-#     if isinstance(a, float) and isinstance(b, float) and isinstance(c, float):
-#         discriminant = b * b - 4 * a * c
-#         return discriminant
-#     else:
-#         raise ValueError
-# 
-# 
-# def calculate_roots(discriminant: float, a: float, b: float):
-# 
-#     if discriminant > 0:
-#         try:
-#             root1 = (-b + math.sqrt(discriminant)) / (2 * a)
-#             root2 = (-b - math.sqrt(discriminant)) / (2 * a)
-#         except ZeroDivisionError:
-#             result = 'Ошибка. это не квадратное уравнение'
-#         else:
-#             result = root1, root2
-# 
-#     elif discriminant == 0:
-#         root1 = -b / (2 * a)
-#         result = root1
-#     else:
-#         result = f'У уравнения нет действительных корней'
-# 
-#     return result
-# 
-# 
-# print('Введите коэфициенты a, b и c для уравнения ax^2 + bx + c = 0')
-# 
-# a = input_coefficient('a')
-# b = input_coefficient('b')
-# c = input_coefficient('c')
-# 
-# discriminant = calculate_discriminant(a, b, c)
-# result = calculate_roots(discriminant, a, b)
-# print(discriminant)
-# print(f'Корни уравнения: {a}x^2 + {b}x + {c} = 0 Ответ: {result}')
+# task 1
+
+
+def input_coefficient(coefficient: str):
+    while True:
+        number = input(f'Введите число {coefficient}: ')
+        try:
+            number = float(number)
+            return number
+        except ValueError:
+            print('Не правильный тип данных')
+
+
+def calculate_discriminant(a: float, b: float, c: float):
+    if isinstance(a, float) and isinstance(b, float) and isinstance(c, float):
+        discriminant = b * b - 4 * a * c
+        return discriminant
+    else:
+        raise ValueError
+
+
+def calculate_roots(discriminant: float, a: float, b: float):
+
+    if discriminant > 0:
+        try:
+            root1 = (-b + math.sqrt(discriminant)) / (2 * a)
+            root2 = (-b - math.sqrt(discriminant)) / (2 * a)
+        except ZeroDivisionError:
+            result = 'Ошибка. это не квадратное уравнение'
+        else:
+            result = root1, root2
+
+    elif discriminant == 0:
+        root1 = -b / (2 * a)
+        result = root1
+    else:
+        result = f'У уравнения нет действительных корней'
+
+    return result
+
+
+print('Введите коэфициенты a, b и c для уравнения ax^2 + bx + c = 0')
+
+a = input_coefficient('a')
+b = input_coefficient('b')
+c = input_coefficient('c')
+
+discriminant = calculate_discriminant(a, b, c)
+result = calculate_roots(discriminant, a, b)
+print(discriminant)
+print(f'Корни уравнения: {a}x^2 + {b}x + {c} = 0 Ответ: {result}')
 
 #
 # # task 2
+# import math
+#
 #
 # def input_side_length(side: str):
 #     while True:
@@ -93,6 +96,7 @@ import math
 # a = input_side_length('a')
 # b = input_side_length('b')
 # c = input_side_length('c')
+# print(a, b, c)
 #
 # print(f'Площадь треугольника со сторанами: {a}, {b}, {c} равна: ', end='')
 # print(calculate_square(a, b, c))
